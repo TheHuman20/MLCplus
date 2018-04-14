@@ -1,7 +1,9 @@
 package com.example.osads.mlcplus;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -45,7 +47,6 @@ public class CreateActivity extends AppCompatActivity {
                 }
             }
         });
-
     }
 
     public void onClickCreatePlayer(View view) {
@@ -61,11 +62,6 @@ public class CreateActivity extends AppCompatActivity {
             startActivity(intent);
         }
     }
-
-    public void radioGr(View view) {
-
-    }
-
     public void onClickClearName(View view) {
         mPlayerName.setText("");
     }

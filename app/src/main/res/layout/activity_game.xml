@@ -160,6 +160,14 @@
                     app:srcCompat="@drawable/down" />
 
             </LinearLayout>
+
+            <Switch
+                android:id="@+id/switch_curse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Switch" />
+
         </LinearLayout>
     </LinearLayout>
 

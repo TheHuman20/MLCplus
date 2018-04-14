@@ -19,4 +19,7 @@
     <string name="bonus">Bonus</string>
     <string name="change_gender">Change gender</string>
     <string name="strength">Strenght</string>
+    <string name="leave_game_title">Leave the game?</string>
+    <string name="leave_game">Are you sure you want to leave the game?</string>
+    <string name="exit">Exit</string>
 </resources>

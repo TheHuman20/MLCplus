@@ -1,8 +1,15 @@
 package com.example.osads.mlcplus;
 
+import android.content.DialogInterface;
+import android.graphics.Color;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -100,8 +107,28 @@ public class GameActivity extends AppCompatActivity {
         }
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
+    public void onBackPressed() {
+        AlertDialog.Builder adb = new AlertDialog.Builder(this);
+                adb.setTitle(getString(R.string.leave_game_title))
+                .setMessage(R.string.leave_game)
+                .setNegativeButton(android.R.string.no, null)
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface arg0, int arg1) {
+                        GameActivity.super.onBackPressed();
+
+                    }
+                });
+        final AlertDialog dialog = adb.show();
+        dialog.getWindow().setBackgroundDrawableResource(R.color.color_background);
+    }
+
+
+
+
+
+
     public void updateStrength(){
-        //String strenght = getString(R.string.strength);
         mFieldStrength.setText(getString(R.string.strength) + ": " + String.valueOf(player.getPlayerLevel() + player.getPlayerBonus()));
     }
 
