@@ -1,11 +1,25 @@
 package com.example.osads.mlcplus;
 
 
+import java.util.ArrayList;
+
 public class Game {
 
     private Player Player;
-    private Rival[] rivals;
+    private ArrayList<Rival> rivals;
     int maxLevel;
+
+    public void setPlayer(com.example.osads.mlcplus.Player player) {
+        Player = player;
+    }
+
+    public ArrayList<Rival> getRivals() {
+        return rivals;
+    }
+
+    public void setRivals(ArrayList<Rival> rivals) {
+        this.rivals = rivals;
+    }
 
     public Game(Player mPlayer, int maxLevel) {
         this.Player = mPlayer;
@@ -14,10 +28,6 @@ public class Game {
 
     public Player getPlayer() {
         return Player;
-    }
-
-    public void setmPlayer(Player mPlayer) {
-        this.Player = mPlayer;
     }
 
     public int getMaxLevel() {

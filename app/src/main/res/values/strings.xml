@@ -1,12 +1,8 @@
 <resources>
     <string name="app_name">MLCplus</string>
-
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-
     <string name="action_settings">Settings</string>
     <string name="title_activity_main">MainActivity</string>
-    <string name="main_head_string">Welcome munchkin!</string>
+    <string name="create_label">Welcome munchkin!</string>
     <string name="gender_choose">Choose your gender</string>
     <string name="done">Done</string>
     <string name="who_are_you">Who are you?</string>
@@ -22,4 +18,12 @@
     <string name="leave_game_title">Leave the game?</string>
     <string name="leave_game">Are you sure you want to leave the game?</string>
     <string name="exit">Exit</string>
+    <string name="gender_curse">Gender curse</string>
+    <string name="game_label">Your character</string>
+    <string name="title_final">You win!</string>
+    <string name="message_final">You are winner! Would you like to continue the game?</string>
+    <string name="epic_mode">Epic mode</string>
+    <string name="about_label">About</string>
+    <string name="about_text">MLCplus\nThis is game assistant for desktop game Munchkin\nDeveloped by Alexandr Osadchiy </string>
+
 </resources>

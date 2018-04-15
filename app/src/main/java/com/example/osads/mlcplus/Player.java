@@ -15,12 +15,14 @@ public class Player implements Parcelable {
     private Gender playerGender;
     private int playerLevel;
     private int playerBonus;
+    private boolean playerCursed;
 
     public Player(String playerName, Gender playerGender) {
         this.playerName = playerName;
         this.playerGender = playerGender;
         this.playerLevel = 1;
         this.playerBonus = 0;
+        this.playerCursed = false;
 
     }
 
@@ -63,12 +65,11 @@ public class Player implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel parcel, int i) {
-        Bundle bundle = new Bundle();
-
         parcel.writeString(playerName);
         parcel.writeSerializable(playerGender);
         parcel.writeInt(playerLevel);
         parcel.writeInt(playerBonus);
+        parcel.writeSerializable(playerCursed);
     }
     public static final Parcelable.Creator<Player> CREATOR = new Parcelable.Creator<Player>(){
 
@@ -87,7 +88,15 @@ public class Player implements Parcelable {
         playerGender = (Gender) parcel.readSerializable();
         playerLevel = parcel.readInt();
         playerBonus = parcel.readInt();
+        playerCursed = (Boolean) parcel.readSerializable();
     }
 
+    public boolean isPlayerCursed() {
+        return playerCursed;
+    }
+
+    public void setPlayerCursed(boolean playerCursed) {
+        this.playerCursed = playerCursed;
+    }
 }
 
