@@ -90,12 +90,12 @@
         android:layout_marginStart="148dp"
         android:onClick="onClickCreatePlayer"
         android:text="@string/create"
-        android:textSize="24dp"
+        android:textSize="24sp"
+        android:textColor="@color/color_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
-        android:textColor="@color/color_background"
         />
 
     <ImageView

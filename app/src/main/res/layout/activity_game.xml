@@ -184,13 +184,14 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/change_gender_button"
             style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="172dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="onClickChangeGender"
             android:text="@string/change_gender"
+            android:textColor="@color/color_background"
             tools:layout_editor_absoluteX="35dp"
             tools:layout_editor_absoluteY="365dp" />
 
@@ -202,6 +203,7 @@
             android:layout_weight="1"
             android:text="@string/strength"
             android:textSize="14sp"
+            android:textColor="@color/color_background"
             tools:layout_editor_absoluteX="201dp"
             tools:layout_editor_absoluteY="365dp" />
 

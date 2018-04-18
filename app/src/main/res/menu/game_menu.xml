@@ -7,7 +7,5 @@
     <item
         android:id="@+id/game_mode_switch"
         android:checkable="true"
-        android:title="@string/epic_mode"
-
-        app:actionLayout="@layout/switch_item" />
+        android:title="@string/epic_mode"/>
 </menu>

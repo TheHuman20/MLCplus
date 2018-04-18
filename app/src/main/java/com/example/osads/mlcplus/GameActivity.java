@@ -27,10 +27,6 @@ public class GameActivity extends AppCompatActivity {
     TextView mFieldLevel;
     TextView mFieldBonus;
     TextView mFieldStrength;
-    ImageButton mLevelUp;
-    ImageButton mLevelDown;
-    ImageButton mBonusUp;
-    ImageButton mBonusDown;
     ImageView mImageView;
     CheckBox mCheckBoxCurse;
     Player player;
@@ -46,15 +42,11 @@ public class GameActivity extends AppCompatActivity {
         mFieldBonus = findViewById(R.id.field_bonus);
         mFieldStrength = findViewById(R.id.text_view_strength);
         mImageView = findViewById(R.id.image_view_player);
-        mLevelUp = findViewById(R.id.image_button_level_up);
-        mLevelDown = findViewById(R.id.image_button_level_down);
-        mBonusUp = findViewById(R.id.image_button_bonus_up);
-        mBonusDown = findViewById(R.id.image_button_bonus_down);
         mCheckBoxCurse = findViewById(R.id.check_box_curse);
         player = getIntent().getParcelableExtra("player");
-        player.setPlayerLevel(1);
-        player.setPlayerBonus(0);
-        player.setPlayerCursed(false);
+//        player.setPlayerLevel(1);
+//        player.setPlayerBonus(0);
+//        player.setPlayerCursed(false);
         mFieldStrength.setText(getString(R.string.strength) + ": " + String.valueOf(player.getPlayerLevel() + player.getPlayerBonus()));
         mImageView.setBackgroundResource(R.drawable.border_x);
         mImageView.setImageResource(R.drawable.no_gender_munch);
@@ -62,7 +54,7 @@ public class GameActivity extends AppCompatActivity {
         mCheckBoxCurse.setOnCheckedChangeListener(new CheckBox.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b == true){
+                if (b){
                     player.setPlayerCursed(true);
                     updateStrength();
                 } else {
@@ -90,7 +82,7 @@ public class GameActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.game_mode_switch:
-                if(item.isChecked() == false){
+                if(!item.isChecked()){
                     item.setChecked(true);
                     maxLevel = 20;
                 }
@@ -186,7 +178,7 @@ public class GameActivity extends AppCompatActivity {
 
 
     public void updateStrength() {
-        if (player.isPlayerCursed() == true) {
+        if (player.isPlayerCursed()) {
             mFieldStrength.setText(getString(R.string.strength) + ": " + String.valueOf(player.getPlayerLevel() + player.getPlayerBonus() - 5));
         } else {
             mFieldStrength.setText(getString(R.string.strength) + ": " + String.valueOf(player.getPlayerLevel() + player.getPlayerBonus()));
