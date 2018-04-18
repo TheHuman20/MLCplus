@@ -44,9 +44,9 @@ public class GameActivity extends AppCompatActivity {
         mImageView = findViewById(R.id.image_view_player);
         mCheckBoxCurse = findViewById(R.id.check_box_curse);
         player = getIntent().getParcelableExtra("player");
-//        player.setPlayerLevel(1);
-//        player.setPlayerBonus(0);
-//        player.setPlayerCursed(false);
+        player.setPlayerLevel(1);
+        player.setPlayerBonus(0);
+        player.setPlayerCursed(false);
         mFieldStrength.setText(getString(R.string.strength) + ": " + String.valueOf(player.getPlayerLevel() + player.getPlayerBonus()));
         mImageView.setBackgroundResource(R.drawable.border_x);
         mImageView.setImageResource(R.drawable.no_gender_munch);
