@@ -25,5 +25,6 @@
     <string name="epic_mode">Epic mode</string>
     <string name="about_label">About</string>
     <string name="about_text">MLCplus\nThis is game assistant for desktop game Munchkin\nDeveloped by Alexandr Osadchiy </string>
+    <string name="Modificators">Modificators</string>
 
 </resources>

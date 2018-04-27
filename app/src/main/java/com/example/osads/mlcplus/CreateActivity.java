@@ -53,7 +53,8 @@ public class CreateActivity extends AppCompatActivity {
         Intent intent = new Intent(CreateActivity.this, GameActivity.class);
         name = mPlayerName.getText().toString();
         Player player = new Player(name, gender);
-        intent.putExtra("player", player);
+        //intent.putExtra("player", player);
+        Game.Player = player;
         if (name.equals("") || gender == null) {
             Toast toast = Toast.makeText(getApplicationContext(), R.string.create_activity_toast,
                     Toast.LENGTH_LONG);

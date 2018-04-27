@@ -1,0 +1,163 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background"
+    tools:context="com.example.osads.mlcplus.BattleFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintTop_toTopOf="@+id/image_view_player">
+
+            <TextView
+                android:id="@+id/battle_text_view_level"
+                android:layout_width="match_parent"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/level"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp"
+                tools:layout_editor_absoluteX="231dp"
+                tools:layout_editor_absoluteY="102dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                tools:layout_editor_absoluteX="179dp"
+                tools:layout_editor_absoluteY="379dp">
+
+                <ImageButton
+                    android:id="@+id/battle_button_level_up"
+                    style="@android:style/Widget.DeviceDefault.Button.Borderless"
+                    android:layout_width="55dp"
+                    android:layout_height="46dp"
+                    android:layout_weight="1"
+                    android:background="@color/color_background"
+                    android:backgroundTint="@color/color_background"
+                    android:src="@drawable/up" />
+
+                <TextView
+                    android:id="@+id/battle_field_level"
+                    android:layout_width="55dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="24sp" />
+
+                <ImageButton
+                    android:id="@+id/battle_button_level_down"
+                    android:layout_width="55dp"
+                    android:layout_height="46dp"
+                    android:layout_weight="1"
+                    android:background="@color/color_background"
+                    android:src="@drawable/down" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/battle_text_view_bonus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/bonus"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp"
+                tools:layout_editor_absoluteX="233dp"
+                tools:layout_editor_absoluteY="151dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                tools:layout_editor_absoluteX="179dp"
+                tools:layout_editor_absoluteY="379dp">
+
+                <ImageButton
+                    android:id="@+id/battle_button_bonus_up"
+                    android:layout_width="55dp"
+                    android:layout_height="46dp"
+                    android:background="@color/color_background"
+                    android:src="@drawable/up" />
+
+                <TextView
+                    android:id="@+id/battle_field_bonus"
+                    android:layout_width="55dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="24sp" />
+
+                <ImageButton
+                    android:id="@+id/battle_button_bonus_down"
+                    android:layout_width="55dp"
+                    android:layout_height="46dp"
+                    android:background="@color/color_background"
+                    android:src="@drawable/down" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/battle_text_view_modificators"
+                android:layout_width="match_parent"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/Modificators"
+                android:textSize="20sp"
+                tools:layout_editor_absoluteX="231dp"
+                tools:layout_editor_absoluteY="102dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                tools:layout_editor_absoluteX="179dp"
+                tools:layout_editor_absoluteY="379dp">
+
+                <ImageButton
+                    android:id="@+id/battle_button_modificator_up"
+                    style="@android:style/Widget.DeviceDefault.Button.Borderless"
+                    android:layout_width="55dp"
+                    android:layout_height="46dp"
+                    android:background="@color/color_background"
+                    android:src="@drawable/up" />
+
+                <TextView
+                    android:id="@+id/battle_field_modificators"
+                    android:layout_width="55dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="24sp" />
+
+                <ImageButton
+                    android:id="@+id/battle_button_modificator_down"
+                    android:layout_width="55dp"
+                    android:layout_height="46dp"
+                    android:background="@color/color_background"
+                    android:src="@drawable/down" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

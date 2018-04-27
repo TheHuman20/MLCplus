@@ -1,0 +1,209 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background"
+    android:orientation="vertical"
+    tools:context="com.example.osads.mlcplus.CharacterFragment">
+
+    <RelativeLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:paddingBottom="12dp"
+        android:paddingEnd="12dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingStart="12dp"
+        android:paddingTop="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/image_view_player"
+            android:layout_width="155dp"
+            android:layout_height="240dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/no_gender_munch"
+            app:srcCompat="@drawable/border_x"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="vertical"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintTop_toTopOf="@+id/image_view_player">
+
+            <TextView
+                android:id="@+id/field_name"
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/player_name"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp"
+                tools:layout_editor_absoluteX="211dp"
+                tools:layout_editor_absoluteY="35dp" />
+
+            <CheckBox
+                android:id="@+id/check_box_curse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/gender_curse"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/text_view_level"
+                android:layout_width="match_parent"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/level"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp"
+                tools:layout_editor_absoluteX="231dp"
+                tools:layout_editor_absoluteY="102dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                tools:layout_editor_absoluteX="179dp"
+                tools:layout_editor_absoluteY="379dp">
+
+                <ImageButton
+                    android:id="@+id/image_button_level_up"
+                    style="@android:style/Widget.DeviceDefault.Button.Borderless"
+                    android:layout_width="55dp"
+                    android:layout_height="46dp"
+                    android:layout_weight="1"
+                    android:background="@color/color_background"
+                    android:backgroundTint="@color/color_background"
+                    android:src="@drawable/up" />
+
+                <TextView
+                    android:id="@+id/field_level"
+                    android:layout_width="55dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="24sp" />
+
+                <ImageButton
+                    android:id="@+id/image_button_level_down"
+                    android:layout_width="55dp"
+                    android:layout_height="46dp"
+                    android:layout_weight="1"
+                    android:background="@color/color_background"
+                    android:src="@drawable/down" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_view_bonus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/bonus"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp"
+                tools:layout_editor_absoluteX="233dp"
+                tools:layout_editor_absoluteY="151dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                tools:layout_editor_absoluteX="179dp"
+                tools:layout_editor_absoluteY="379dp">
+
+                <ImageButton
+                    android:id="@+id/image_button_bonus_up"
+                    style="@android:style/Widget.DeviceDefault.Button.Borderless"
+                    android:layout_width="55dp"
+                    android:layout_height="46dp"
+                    android:background="@color/color_background"
+                    android:src="@drawable/up" />
+
+                <TextView
+                    android:id="@+id/field_bonus"
+                    android:layout_width="55dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="24sp" />
+
+                <ImageButton
+                    android:id="@+id/image_button_bonus_down"
+                    android:layout_width="55dp"
+                    android:layout_height="46dp"
+                    android:background="@color/color_background"
+                    android:src="@drawable/down" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+
+        <Button
+            android:id="@+id/change_gender_button"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="172dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/change_gender"
+            android:textColor="@color/color_background"
+            tools:layout_editor_absoluteX="35dp"
+            tools:layout_editor_absoluteY="365dp" />
+
+        <TextView
+            android:id="@+id/text_view_strength"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="172dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/strength"
+            android:textColor="@color/color_background"
+            android:textSize="14sp"
+            tools:layout_editor_absoluteX="201dp"
+            tools:layout_editor_absoluteY="365dp" />
+
+
+    </LinearLayout>
+
+</LinearLayout>
