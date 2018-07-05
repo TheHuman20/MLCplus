@@ -21,6 +21,9 @@ public class CreateActivity extends AppCompatActivity {
     Gender gender;
     String name;
 
+    
+    //Creating start activity and initializing all compotents of it
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,8 +31,7 @@ public class CreateActivity extends AppCompatActivity {
         mRadioGroupGender = findViewById(R.id.radio_group_gender);
         mButtonCreate = findViewById(R.id.create_player_button);
         mPlayerName = findViewById(R.id.edit_text_name);
-        mImageViewGender = findViewById(R.id.image_view_gender);
-
+        mImageViewGender = findViewById(R.id.image_view_gender);        
         mRadioGroupGender.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int checkedId) {
@@ -48,7 +50,10 @@ public class CreateActivity extends AppCompatActivity {
             }
         });
     }
-
+    
+    //Click processing method
+    //Creating Player object and transfer this object to the next activity
+    
     public void onClickCreatePlayer(View view) {
         Intent intent = new Intent(CreateActivity.this, GameActivity.class);
         name = mPlayerName.getText().toString();
@@ -62,6 +67,7 @@ public class CreateActivity extends AppCompatActivity {
             startActivity(intent);
         }
     }
+    
     public void onClickClearName(View view) {
         mPlayerName.setText("");
     }
