@@ -21,7 +21,7 @@ import android.widget.TextView;
 
 public class GameActivity extends AppCompatActivity {
 
-    //TODO multiplayer mode
+    //TODO "multiplayer" mode with Firebase
 
     TextView mFieldName;
     TextView mFieldLevel;
@@ -33,6 +33,8 @@ public class GameActivity extends AppCompatActivity {
 
     int maxLevel=10;
 
+    // Init all components of activity
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,7 +68,9 @@ public class GameActivity extends AppCompatActivity {
                 mFieldLevel.setText(String.valueOf(player.getPlayerLevel()));
         mFieldBonus.setText(String.valueOf(player.getPlayerBonus()));
     }
-
+    
+    // Init popup menu
+    
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.game_menu, menu);
@@ -94,6 +98,8 @@ public class GameActivity extends AppCompatActivity {
         }
         return true;
     }
+    
+    // Click processing methods for all of clickable elements in current activity with logic  
 
     public void onClickLevelUp(View view) {
         if (player.getPlayerLevel() <= maxLevel-1) {
